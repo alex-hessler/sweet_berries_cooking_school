@@ -1,0 +1,214 @@
+/* Preferred box-sizing value CSS*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*Non-Specific Formatting CSS*/
+html, body{
+  height:100%;
+  width:100%;
+  font-family: 'roboto', sans-serif;
+}
+h1{
+  font-size:48px;
+}
+h2{
+  position: relative;
+  left:40px;
+}
+.card-text{
+  font-size:18px;
+  color:#83869A;
+}
+/*Header Segment: Logo, Nav Menu CSS*/
+.header-container{
+  display: flex;
+  width: 100vw;
+  margin-bottom: 16px;
+}
+.header-logo-left{
+  justify-content:flex-start;
+  width: auto;
+}
+.header-nav{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 90%;
+  height: 200px;
+}
+button.header {
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  background: linear-gradient(#FF4C4C,#A94E97);
+  border: none;
+  width: 167px;
+  height: 56px;
+  border-radius: 50px;
+  margin-left: 32px;
+  cursor: pointer;
+}
+a.button {
+  text-decoration: none;
+}
+a.header {
+  text-decoration: none;
+  font-size: 28px;
+  color: #FF4C4C;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+/*Header Segment: Hamburger Menu CSS*/
+rect {
+  stroke:#FF4C4C;
+   fill: #FF4C4C;
+}
+.hamburger, .hamburger-button {
+  font-size: 17px;    
+  border: none;
+  color: #000000;
+  padding: 14px 16px;
+  background-color: inherit;
+}
+.hamburger-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  right: 20px;
+  box-shadow: 0px 8px 16px 0px;
+  background:white;
+}
+.hamburger-content a {
+  float: none;
+  color: #000000;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.hamburger:hover{
+  background-color:white;
+  opacity:75%;
+  color: black;
+}
+.hamburger-content a:hover {
+  background: linear-gradient(#FF4C4C,#A94E97);
+  color: grey;
+}
+.hamburger:hover .hamburger-content {
+  display: block;
+}
+/*Media Queries for Min & Max Width of 800px*/
+@media only screen and (min-width: 800px)  {
+  .hamburger {
+    height: 0px;
+    width: 0px;
+    visibility: hidden;
+    margin-right: 0%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .nav-menu {
+    visibility: hidden;
+  }
+}
+/*Main Segment: 6 Cards w/ Imgs & Link*/
+/*-------------------------------*/
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 86%;
+  justify-content: space-around;
+  gap:auto;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content:center;
+  width: 286px;
+  padding-left: 36px;
+  padding-right: 32px;
+  padding-bottom: 12px;
+  padding-top: 5px;
+  height: 258px;
+  border-radius: 16px;
+  margin: 100px 16px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.get-started{
+  position: box;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  color: #FF4C4C;
+  cursor: pointer;
+  text-align: center;
+}
+.card-img {
+  position: absolute;
+  width: 61px;
+  height: 87px;
+  left: 9px;
+  top: -48px;
+}
+.card-special {
+  color: white;
+  background: linear-gradient(#FF4C4C,#A94E97);
+  cursor: pointer;
+}
+.card-special-text {
+  position: absolute;
+  right:20px;
+  color: white;
+  font-weight: 700;
+  font-size: 35px;
+  width: 200px;
+  text-align: center;
+}
+@media only screen and (max-width: 1460px) {
+  .card-container {
+    max-width: 1100px;
+  }
+  .card {
+    margin: 28px 10px;  
+  } 
+}
+@media only screen and (max-width: 800px) {
+  .card-container {
+    max-width: 400px;
+  }
+  .card {
+    margin: 36px 10px;  
+  } 
+@media only screen and (max-width: 800px) {
+  .card-special {
+    order: -1;
+    height: 200px;
+  }
+}
+/*Footer Segment CSS*/
+footer {
+  background: #FF4C4C;
+  width: 100%;
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 40px;
+  text-align: center;
+}
+footer p {
+  color:#FFFFFF;
+  padding-left: 50px;
+  margin-top: 50px;
+}
